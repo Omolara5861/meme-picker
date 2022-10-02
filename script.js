@@ -1,5 +1,4 @@
-const catsData = [
-    {
+const catsData = [{
         emotionTags: ["moody"],
         isGif: false,
         image: "angry.jpeg",
@@ -169,12 +168,77 @@ const catsData = [
     },
 ]
 
-function getEmotionsArray(cats){
-    const emotionsArray = []
-    for (let i = 0; i < cats.length; i++){
-        for (let j=0; j < cats[i].emotionTags.length; j++){
-                emotionsArray.push(cats[i].emotionTags[j])
+function getEmotionsArray(cats) {
+    /*
+    Challenge:
+    1. Set up a const and initialise it with 
+       an empty array.
+    2. Instead of logging out each emotion, 
+       push each one to the new array.
+    3. At the end of the function, log out the 
+       const holding the new array.
+    */
+    const emotionsArray = [];
+
+    /*
+    Challenge:
+    1. Set up a "for of" in getEmotionsArray to iterate 
+       over the data.
+    2. For now, just log out each cat object individually.
+    */
+    for (let cat of cats) {
+        // console.log(cat);
+
+        /*
+        Challenge:
+        1. Add a nested "for of" to log out just 
+           the emotions from the emotionTags array 
+           in each object.
+        */
+        for (let emotion of cat.emotionTags) {
+            emotionsArray.push(emotion);
         }
     }
-console.log(emotionsArray)
+    // console.log(emotionsArray);
+    return emotionsArray;
 }
+
+  /*
+Challenge:
+1. Take control of the 'emotion-radios' div.
+2. In renderEmotionsRadios, set up a let 
+   to hold our string of HTML. You can initialise
+   it with an empty string.
+3. Iterate over "emotions" and put each emotion 
+   in a <p> tag and then add them to the let you 
+   created in step 2. 
+4. Render the string to the 'emotion-radios' div.
+*/
+
+let emotionsHtml = '';
+    
+
+const emotionsContainer = document.getElementById('emotion-radios');
+
+
+
+function renderEmotionsRadios(cats) {
+    /*
+    Challenge:
+    1. Have the new function "renderEmotionsRadios" 
+       take in a single parameter. Name that parameter
+       "cats". 
+    2. Inside renderEmotionsRadios, set up a const called 
+       "emotions" and set it equals to whatever is returned 
+       by calling getEmotionsArray, passing in "cats" as an 
+       argument.
+    3. For now, renderEmotionsRadios should just log out 
+       "emotions".
+    4. Call renderEmotionsRadios passing in catsData.
+    */
+    const emotions = getEmotionsArray(cats);
+    // console.log(emotions)
+
+}
+
+renderEmotionsRadios(catsData);
