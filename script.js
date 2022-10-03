@@ -203,23 +203,9 @@ function getEmotionsArray(cats) {
     return emotionsArray;
 }
 
-  /*
-Challenge:
-1. Take control of the 'emotion-radios' div.
-2. In renderEmotionsRadios, set up a let 
-   to hold our string of HTML. You can initialise
-   it with an empty string.
-3. Iterate over "emotions" and put each emotion 
-   in a <p> tag and then add them to the let you 
-   created in step 2. 
-4. Render the string to the 'emotion-radios' div.
-*/
 
-let emotionsHtml = '';
-    
 
 const emotionsContainer = document.getElementById('emotion-radios');
-
 
 
 function renderEmotionsRadios(cats) {
@@ -239,6 +225,23 @@ function renderEmotionsRadios(cats) {
     const emotions = getEmotionsArray(cats);
     // console.log(emotions)
 
+      /*
+Challenge:
+1. Take control of the 'emotion-radios' div.
+2. In renderEmotionsRadios, set up a let 
+   to hold our string of HTML. You can initialise
+   it with an empty string.
+3. Iterate over "emotions" and put each emotion 
+   in a <p> tag and then add them to the let you 
+   created in step 2. 
+4. Render the string to the 'emotion-radios' div.
+*/    
+    let emotionHtml = '';
+    for(let emotion of emotions) {
+        emotionHtml += `<p>${emotion}</p>`;
+    }
+
+    emotionsContainer.innerHTML = emotionHtml;
 }
 
 renderEmotionsRadios(catsData);
