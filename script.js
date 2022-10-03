@@ -6,6 +6,8 @@ and import it into index.js.
 
 import {catsData} from './data.js';
 const emotionsContainer = document.getElementById('emotion-radios');
+const getImgBtn = document.getElementById('get-image-btn');
+const gifsOnlyOption = document.getElementById('gifs-only-option');
 
     /*
     Challenge:
@@ -40,6 +42,47 @@ for (let item of itemsArray) {
 */ 
 document.getElementById(e.target.id).parentElement.classList.add('highlight');
 }
+
+    /*
+    Challenge:
+    1. Set up an eventlistener which calls a new
+    function called "getMatchingCatsArray" when
+    the "Get Image" button is clicked.
+    2. getMatchingCatsArray should save the value
+    of the checked radio input to a const and 
+    log out that const.
+    */
+
+    getImgBtn.addEventListener('click', getMatchingCatsArray);
+
+function getMatchingCatsArray(e) {
+    /*
+    Challenge:
+    1. Take control of the gifs only option checkbox.
+    2. Set up a const in getMatchingCatsArray to store 
+    a boolean which will be set to true if the 
+    "gifs only" option is checked and false if it's
+    not. (Think what a good name for this const would 
+    be.)
+    3. Log it out to check it's working.
+    */
+    
+    const isGif = gifsOnlyOption.checked;
+    console.log(isGif);
+
+    /*
+    Challenge:
+    1. Add code to getMatchingCatsArray so 
+    that the two existing lines of code 
+    only run if an emotion has been selected.
+    */
+    if (document.querySelector('input[type="radio"]:checked')) {
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value;
+        console.log(selectedEmotion);
+    }
+}
+
+
 function getEmotionsArray(cats) {
     /*
     Challenge:
