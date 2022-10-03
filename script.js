@@ -5,7 +5,41 @@ and import it into index.js.
 */
 
 import {catsData} from './data.js';
+const emotionsContainer = document.getElementById('emotion-radios');
 
+    /*
+    Challenge:
+    1. Add an eventListener to emotionRadios that will listen 
+    out for any *change* in our radio buttons. When it detects
+    a change, it should log out the id of the element that 
+    was selected.
+    ⚠️️ ️T️h️is won't work if the eventListener is listening out for a 
+    'click'. Google what event to listen for - I've already 
+    given you a clue!
+    */
+    emotionsContainer.addEventListener('change', highlightCheckedOption);
+
+function highlightCheckedOption (e)  {
+    /*
+    Challenge:
+    1. Create an array of all items that have 
+    the "radio" class.
+    2. Iterate over the array and remove the 
+    "highlight" class from each one.
+*/ 
+const itemsArray = document.getElementsByClassName('radio');
+for (let item of itemsArray) {
+    item.classList.remove('highlight');
+}
+
+    /*
+    Challenge:
+    1. highlightCheckedOption should take control 
+    of the selected radio input and add the CSS
+    class of "highlight" to its classlist
+*/ 
+document.getElementById(e.target.id).parentElement.classList.add('highlight');
+}
 function getEmotionsArray(cats) {
     /*
     Challenge:
@@ -52,7 +86,6 @@ function getEmotionsArray(cats) {
 
 
 
-const emotionsContainer = document.getElementById('emotion-radios');
 
 
 function renderEmotionsRadios(cats) {
