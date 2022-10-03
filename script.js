@@ -33,7 +33,18 @@ function getEmotionsArray(cats) {
         in each object.
         */
         for (let emotion of cat.emotionTags) {
+
+    /*
+    Challenge:
+    1. Refactor this nested for of so that an 
+    emotion is only pushed to emotionsArray
+    if it is not already in emotionsArray.
+    Extra kudos if you use the "logical not"
+    operator - feel free to google it!
+    */
+            if (!emotionsArray.includes(emotion)) {
             emotionsArray.push(emotion);
+            }
         }
     }
     return emotionsArray;
