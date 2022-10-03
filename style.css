@@ -79,6 +79,7 @@ label{
     background-color: #fff0ee;
     color: #bd301d;
     font-weight: bold;
+    accent-color: #bd301d;
 }
 
 .radio:last-child{
