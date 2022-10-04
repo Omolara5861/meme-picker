@@ -80,7 +80,30 @@ function getMatchingCatsArray(e) {
     const isGif = gifsOnlyOption.checked;
         console.log(isGif);
     
-        
+    /*
+    Challenge:
+    1. Use the .filter() and .includes() methods to get 
+    an array of cats which have the selected emotion
+    in their emotionTags array. 
+    2. Store this array in a const and log it out to check
+    it's working. Think: what would be a good name for the
+    const?
+    */
+    const matchingCatsArray = catsData.filter(selectedCat => {
+    /*
+    Challenge:
+    1. Change the .filter() method's function so it returns an 
+    array that only has GIFs if the 'GIFs only' option is 
+    checked. If the 'GIFs only' option is not checked, it
+    should return an array of all matches as it does now.
+    */ 
+        if (isGif && selectedCat.emotionTags.includes(selectedEmotion)) {
+            return selectedCat.isGif;
+        }
+        return selectedCat.emotionTags.includes(selectedEmotion)
+    });
+    
+    return matchingCatsArray;
     }
 }
 
