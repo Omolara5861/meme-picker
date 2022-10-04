@@ -1,5 +1,5 @@
 # Pumpkin's Purrfect Meme Picker
-This project is part of the Essential Javascript Concept Module from Scrimba's `The Frontend Career Path Course`. It is an app that will give you a cat themed meme that matches the mood selected by a user. 
+This project is part of the Essential Javascript Concept Module from Scrimba's `The Frontend Career Path Course`. It is an app that will give you a cat themed meme that matches the mood selected from the list of emotions on the page. 
 
 ## Concepts Learned
 
