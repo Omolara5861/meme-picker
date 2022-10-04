@@ -58,6 +58,16 @@ document.getElementById(e.target.id).parentElement.classList.add('highlight');
 function getMatchingCatsArray(e) {
     /*
     Challenge:
+    1. Add code to getMatchingCatsArray so 
+    that the two existing lines of code 
+    only run if an emotion has been selected.
+    */
+    if (document.querySelector('input[type="radio"]:checked')) {
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value;
+        console.log(selectedEmotion);
+
+    /*
+    Challenge:
     1. Take control of the gifs only option checkbox.
     2. Set up a const in getMatchingCatsArray to store 
     a boolean which will be set to true if the 
@@ -68,17 +78,9 @@ function getMatchingCatsArray(e) {
     */
     
     const isGif = gifsOnlyOption.checked;
-    console.log(isGif);
-
-    /*
-    Challenge:
-    1. Add code to getMatchingCatsArray so 
-    that the two existing lines of code 
-    only run if an emotion has been selected.
-    */
-    if (document.querySelector('input[type="radio"]:checked')) {
-        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value;
-        console.log(selectedEmotion);
+        console.log(isGif);
+    
+        
     }
 }
 
