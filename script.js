@@ -58,6 +58,16 @@ document.getElementById(e.target.id).parentElement.classList.add('highlight');
 
     getImgBtn.addEventListener('click', renderCat);
 
+    /*
+    Challenge:
+    1. Wire up the X button in the modal so
+    it closes the modal.
+    */ 
+    memeModalCloseBtn.addEventListener('click', closeModal);
+    function closeModal() {
+        memeModal.style.display = 'none';
+    }
+
 function getMatchingCatsArray(e) {
     /*
     Challenge:
