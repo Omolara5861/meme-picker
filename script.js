@@ -53,7 +53,7 @@ document.getElementById(e.target.id).parentElement.classList.add('highlight');
     log out that const.
     */
 
-    getImgBtn.addEventListener('click', getMatchingCatsArray);
+    getImgBtn.addEventListener('click', renderCat);
 
 function getMatchingCatsArray(e) {
     /*
@@ -107,7 +107,40 @@ function getMatchingCatsArray(e) {
     }
 }
 
+function getSingleCatObject() {
+    /*
+    Challenge:
+    1. Inside this function, call getMatchingCatsArray 
+    and save whatever it returns to a const called 
+    “catsArray”. 
+    */
+    const catsArray = getMatchingCatsArray();
+    // console.log(catsArray);
+    /*
+    Challenge:
+    1. Set up an if to check if there is only one
+    cat object in the array. If there is, log
+    out that cat object (but not the whole array!)
+    {}
+    Test: "happy", animated GIFS only checked.
+    */  
+    if (catsArray.length === 1) {
+        console.log(catsArray[0]);
+    }
+    else {
+        /*
+        Challenge:
+        1. If catsArray has more than one object, 
+        select an object at random and log it out.
+        */
+       let randomCat = Math.floor(Math.random() * catsArray.length);
+        console.log(catsArray[randomCat]);
+    }
+}
 
+function renderCat() {
+    getSingleCatObject();
+}
 function getEmotionsArray(cats) {
     /*
     Challenge:
