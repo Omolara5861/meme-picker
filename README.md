@@ -25,12 +25,12 @@ This project was developed using ![Visual Studio Code](https://img.shields.io/ba
 
 
 * __Project Management and Version Control__<br/>
-        ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+      ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Current Todo
-- [ ] Refactor app UI
-- [ ] Display multiple meme
-- [ ] Improve UX of the app
+- [ ] Refactor app UI (Improve the look and feel of the project)
+- [ ] Display multiple meme in a slider or carousel 
+- [ ] Improve app UX (Enable Users to close modal by clicking anywhere on the page)
 
 ## About Scrimba
 
