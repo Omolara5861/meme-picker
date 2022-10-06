@@ -27,6 +27,10 @@ This project was developed using ![Visual Studio Code](https://img.shields.io/ba
 * __Project Management and Version Control__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+## Current Todo
+- [ ] Refactor app UI
+- [ ] Display multiple meme
+- [ ] Improve UX of the app
 
 ## About Scrimba
 
