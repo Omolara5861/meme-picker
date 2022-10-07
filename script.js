@@ -33,6 +33,13 @@ it closes the modal.
 */
 memeModalCloseBtn.addEventListener('click', closeModal);
 
+//closes the modal when anywhere on the madal is clicked
+document.addEventListener('click', (e) => {
+    if (e.target === memeModal) {
+        closeModal();
+    }
+});
+
 /*
 Challenge:
 1. Set up an eventlistener which calls a new
