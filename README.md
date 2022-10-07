@@ -30,7 +30,7 @@ This project was developed using ![Visual Studio Code](https://img.shields.io/ba
 ## Current Todo
 - [ ] Refactor app UI (Improve the look and feel of the project)
 - [ ] Display multiple meme in a slider or carousel 
-- [ ] Improve app UX (Enable Users to close modal by clicking anywhere on the modal)
+- [X] Improve app UX (Enable Users to close modal by clicking anywhere on the modal)
 
 ## About Scrimba
 
