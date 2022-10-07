@@ -32,6 +32,10 @@ header{
     background-color: #67595E;
 }
 
+main {
+    margin-top: 100px;
+}
+
 .header-inner{
     display: flex;
     align-items: center;
@@ -48,7 +52,7 @@ header{
 .controls-container{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 605px;
     margin: 0px auto;
 }
 
